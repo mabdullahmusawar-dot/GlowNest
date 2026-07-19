@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowNest - Premium Luxury Beauty & Fashion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+                <span>GlowNest</span>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#beauty">Beauty</a></li>
+                <li><a href="#makeup">Makeup</a></li>
+                <li><a href="#jewellery">Jewellery</a></li>
+                <li><a href="#perfumes">Perfumes</a></li>
+                <li><a href="#bags">Bags</a></li>
+                <li><a href="#fashion">Fashion</a></li>
+            </ul>
+            
+            <div class="nav-icons">
+                <button class="wishlist-btn" id="wishlistBtn">
+                    <i class="far fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </button>
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Experience Luxury</h1>
+            <p class="hero-subtitle">Discover our exclusive collection of premium beauty, fashion, and accessories</p>
+            <button class="cta-btn">Shop Now</button>
+        </div>
+        <div class="hero-images">
+            <div class="hero-image-grid">
+                <img src="https://images.unsplash.com/photo-1570194065650-add96e1ce488?w=400&h=400&fit=crop" alt="Perfume">
+                <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop" alt="Makeup">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=400&fit=crop" alt="Bags">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="section-header">
+            <h2>Featured Collection</h2>
+            <p>Handpicked luxury items just for you</p>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Product Detail Popup -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalCategory" class="modal-category"></p>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalStars"></div>
+                        <span id="modalReviewCount">(0 reviews)</span>
+                    </div>
+                    <p id="modalPrice" class="modal-price"></p>
+                    <p id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <button class="add-to-cart-btn" id="modalAddCart">Add to Cart</button>
+                        <button class="wishlist-modal-btn" id="modalWishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="modal-reviews">
+                        <h3>Customer Reviews</h3>
+                        <div id="modalReviewsList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section">
+        <div class="section-header">
+            <h2>What Our Customers Say</h2>
+            <p>Real reviews from real customers</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Reviews will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Join Our Luxury Club</h2>
+            <p>Get exclusive offers and early access to new collections</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>We're here to help</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/1234567890" target="_blank">Chat with us</a></p>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@glownest.com">hello@glownest.com</a></p>
+            </div>
+            
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>123 Luxury Lane, Fashion District<br>New York, NY 10001</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GlowNest</h3>
+                <p>Your destination for premium beauty, fashion, and luxury accessories.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#beauty">Beauty</a></li>
+                    <li><a href="#makeup">Makeup</a></li>
+                    <li><a href="#perfumes">Perfumes</a></li>
+                    <li><a href="#fashion">Fashion</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 GlowNest. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
